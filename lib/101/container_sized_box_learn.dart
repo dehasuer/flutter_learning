@@ -18,6 +18,15 @@ class ContainerSizedBoxLearn extends StatelessWidget {
           SizedBox.square(
             dimension: 50,
             child: Text("b" * 50),
+          ),
+          Container(
+            width: 50,
+            height: 50,
+            color: Colors.red,
+            constraints: BoxConstraints(maxWidth: 100, minWidth: 50),
+            child: Text("a" * 2),
+            padding: EdgeInsets.all(10),
+            
           )
         ],
       ),
