@@ -8,19 +8,23 @@ class TextLearView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(
-          ('Buy The Best One $name'),
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-          textAlign: TextAlign.right,
-          style: TextStyle(
-              wordSpacing: 2,
-              decoration: TextDecoration.underline,
-              fontStyle: FontStyle.italic,
-              letterSpacing: 2,
-              color: Colors.black38,
-              fontSize: 16,
-              fontWeight: FontWeight.w600),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(('Buy The Best One $name'),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.right,
+                style: ProjectStyles.welcomeStyle),
+            Text(('Buy The Best One $name'),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.right,
+                style: Theme.of(context)
+                    .textTheme
+                    .headline5
+                    ?.copyWith(color: Colors.blue)),
+          ],
         ),
       ),
     );
@@ -28,5 +32,16 @@ class TextLearView extends StatelessWidget {
 }
 
 class ProjectStyles {
-  
+  static TextStyle welcomeStyle = TextStyle(
+      wordSpacing: 2,
+      decoration: TextDecoration.underline,
+      fontStyle: FontStyle.italic,
+      letterSpacing: 2,
+      color: Colors.lime,
+      fontSize: 16,
+      fontWeight: FontWeight.w600);
+}
+
+class ProjectColors {
+  static Color welcomeColor = Colors.red;
 }
