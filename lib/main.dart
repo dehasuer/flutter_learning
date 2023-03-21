@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_full_learn/101/app_bar_learn.dart';
 import 'package:flutter_full_learn/101/button_learn.dart';
+import 'package:flutter_full_learn/101/color_learn.dart';
 import 'package:flutter_full_learn/101/container_sized_box_learn.dart';
+import 'package:flutter_full_learn/101/icon_learn.dart';
 import 'package:flutter_full_learn/101/scaffold_learn.dart';
 import 'package:flutter_full_learn/101/text_learn.dart';
 
@@ -17,19 +20,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: AppBarLearn(),
+      theme: ThemeData.dark().copyWith(
+          appBarTheme: AppBarTheme(
+        centerTitle: true,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
+        backgroundColor: Colors.red,
+        elevation: 0,
+      )),
+      home: ColorLearn(),
     );
   }
 }
