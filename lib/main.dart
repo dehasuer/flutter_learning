@@ -6,6 +6,7 @@ import 'package:flutter_full_learn/101/color_learn.dart';
 import 'package:flutter_full_learn/101/container_sized_box_learn.dart';
 import 'package:flutter_full_learn/101/icon_learn.dart';
 import 'package:flutter_full_learn/101/scaffold_learn.dart';
+import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_learn.dart';
 
 void main() {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.red,
         elevation: 0,
       )),
-      home: ColorLearn(),
+      home: StatelessLearn(),
     );
   }
 }
