@@ -11,7 +11,7 @@ class ColorLearn extends StatelessWidget {
       ),
       body: Container(
         color: ColorsItems.sulu,
-        child: Text("data", textAlign: TextAlign.center),
+        child: Center(child: Text("data")),
         height: 100,
         width: 100,
       ),
