@@ -22,14 +22,24 @@ class ContainerSizedBoxLearn extends StatelessWidget {
           Container(
             width: 50,
             height: 50,
-            color: Colors.red,
             constraints: BoxConstraints(maxWidth: 100, minWidth: 50),
             child: Text("a" * 2),
             padding: EdgeInsets.all(10),
-            
+            margin: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              //color: Colors.red,
+              gradient: LinearGradient(colors: [Colors.black, Colors.red]),
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.green, offset: Offset(0.1, 1), blurRadius: 5)
+              ],
+              border: Border.all(width: 10, color: Colors.white12),
+            ),
           )
         ],
       ),
     );
   }
 }
+
