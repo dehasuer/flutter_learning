@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn/core/random_image.dart';
 
 class ListTileLearn extends StatelessWidget {
   const ListTileLearn({super.key});
@@ -15,11 +16,7 @@ class ListTileLearn extends StatelessWidget {
           children: [
             Card(
               child: ListTile(
-                title: Image.network(
-                  imageUrl,
-                  height: 100,
-                  fit: BoxFit.cover,
-                ),
+                title: RandomImage(),
                 onTap: () {},
                 subtitle: Text("How do you use your card?"),
                 leading: Icon(Icons.money_off_outlined),
