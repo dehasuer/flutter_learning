@@ -8,6 +8,7 @@ import 'package:flutter_full_learn/101/container_sized_box_learn.dart';
 import 'package:flutter_full_learn/101/custom_widget.dart';
 import 'package:flutter_full_learn/101/icon_learn.dart';
 import 'package:flutter_full_learn/101/image_learn.dart';
+import 'package:flutter_full_learn/101/indicator_learn.dart';
 import 'package:flutter_full_learn/101/padding_learn.dart';
 import 'package:flutter_full_learn/101/scaffold_learn.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
@@ -26,13 +27,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark().copyWith(
+          progressIndicatorTheme: ProgressIndicatorThemeData(color: Colors.red),
           appBarTheme: AppBarTheme(
-        centerTitle: true,
-        systemOverlayStyle: SystemUiOverlayStyle.light,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      )),
-      home: CustomWidgetLearn(),
+            centerTitle: true,
+            systemOverlayStyle: SystemUiOverlayStyle.light,
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+          )),
+      home: IndicatorLearn(),
     );
   }
 }
