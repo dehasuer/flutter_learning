@@ -9,9 +9,21 @@ class ImageLearn extends StatelessWidget {
       appBar: AppBar(),
       body: Column(
         children: [
-          Image.
+          SizedBox(
+            height: 400,
+            width: 300,
+            child: Image.asset(
+              ImageItems().appleWithBook,
+              fit: BoxFit.cover,
+            ),
+          ),
         ],
       ),
     );
   }
+}
+
+class ImageItems {
+  final String appleWithBook = "assets/png/apple-school-books.png";
+  final String appleBookWithoutPath = "apple-school-books";
 }
